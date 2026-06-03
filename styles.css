@@ -18,6 +18,7 @@
   --radius: 14px;
   --radius-sm: 8px;
   --nav-h: 64px;
+  --ease: cubic-bezier(0.4,0,0.2,1);
 }
 
 /* Light mode */
@@ -56,6 +57,18 @@ ul { list-style: none; }
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+}
+.hero {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: calc(var(--nav-h) + 2rem) 1.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .bg-particles span {
   position: absolute;
@@ -210,18 +223,7 @@ body.light .theme-toggle__sun  { display: none; }
 /* =============================================
    Hero
    ============================================= */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  padding: calc(var(--nav-h) + 2rem) 1.5rem 4rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  z-index: 1;
-}
+/* hero defined above near bg-particles */
 .hero__content { max-width: 560px; }
 .hero__greeting {
   font-size: 1rem; font-weight: 500;
